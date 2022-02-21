@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'; 
+import App from "./components/app";
+import Layout from './components/layout';
 
 ReactDOM.render( 
-    <div> Hello World </div>,
+    <Layout />,
     document.getElementById('root')
 );
