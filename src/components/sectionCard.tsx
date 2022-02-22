@@ -1,15 +1,16 @@
 import React, { CSSProperties } from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
     title: string;
 }
 
 function SectionCard(props: Props){
-    const url = "assets/" + props.title + ".jpg";
+    const url = "/assets/" + props.title + ".jpg";
     return (
-        <div style={rootStyle(url)}>
+        <Link to={"/detail/" + props.title} style={rootStyle(url)}>
             <h2 style={titleStyle}>{props.title}</h2>
-        </div>
+        </Link>
     );
 }
 
@@ -17,12 +18,13 @@ function SectionCard(props: Props){
 const rootStyle = (imageSrc: string): CSSProperties => ({
     flex: 1,
     display:"flex",
-    backgroundImage: 'url(${imageSrc})',
+    backgroundImage: `url(${imageSrc})`,
     backgroundSize:"cover",
     backgroundPosition: "center",
     justifyContent: 'center',
     alignItems:'center',
-    
+    textDecoration: "none",
+    color: "#111",
 });
 
 

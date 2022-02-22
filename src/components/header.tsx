@@ -1,9 +1,13 @@
 import React, { CSSProperties } from "react";
+import {Link} from "react-router-dom";
+
 
 function Header(){
     return (
     <div style={rootStyle}>
-        <h1 style={titleStyle}>React Playground</h1>
+        <Link to="/" style={linkStyle}>
+            <h1 style={titleStyle}>React Playground</h1>
+        </Link>
     </div>
     );
 }
@@ -21,5 +25,11 @@ const rootStyle: CSSProperties = {
 const titleStyle: CSSProperties = {
     margin: '0'
 }
+
+const linkStyle: CSSProperties = {
+    color: "#eee",
+    textDecoration: "none",
+}
+
 
 export default Header;

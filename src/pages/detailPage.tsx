@@ -1,12 +1,9 @@
 import React, { CSSProperties } from "react";
-import SectionCard from "./sectionCard";
 
-function Main(){
+function DetailPage(){
     return (
     <div style={rootStyle}>
-        <SectionCard title="Forest"/>
-        <SectionCard title="Sky"/>
-        <SectionCard title="Desert"/>
+        Helloworld
         
     </div>
     );
@@ -23,4 +20,4 @@ const rootStyle: CSSProperties = {
 };
 
 
-export default Main;
+export default DetailPage;

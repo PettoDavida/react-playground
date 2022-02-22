@@ -1,20 +1,16 @@
-import React, { CSSProperties } from "react";
+import React, { StrictMode } from "react";
+import { BrowserRouter } from "react-router-dom";
 import Layout from "./layout";
 
 function App(){
     return (
-    <div style={rootStyle}>
-        <h1> Hello from React & Typescript</h1>
-    </div>
+        <StrictMode>
+            <BrowserRouter>
+                <Layout />
+            </BrowserRouter>
+        </StrictMode>
+
     );
 }
-
-
-const rootStyle: CSSProperties = {
-    height: "100%",
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-};
 
 export default App;
